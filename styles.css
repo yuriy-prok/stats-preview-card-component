@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
 .card {
   display: flex;
   flex-direction: column-reverse;
@@ -14,11 +14,10 @@
   justify-content: center;
   padding: 36px;
 }
-.card__title,
-.card__title--highlight {
+.card__title, .card__title--highlight {
   margin-bottom: 20px;
   text-align: center;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 700;
   font-size: 27px;
   color: hsl(0, 0%, 100%);
@@ -29,7 +28,7 @@
 .card__text {
   margin-bottom: 20px;
   text-align: center;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 13.2px;
@@ -50,25 +49,37 @@
 }
 .card__stats-value {
   margin-bottom: 5px;
-  font-family: 'Lexend Deca';
+  font-family: "Lexend Deca";
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 1px;
   color: hsl(0, 0%, 100%);
 }
 .card__stats-label {
-  font-family: 'Lexend Deca';
+  font-family: "Lexend Deca";
   font-weight: 400;
   font-size: 13.2px;
   color: hsla(0, 0%, 100%, 0.6);
 }
 .card__image {
+  position: relative;
   width: 300px;
   height: 200px;
-  background: url('./images/image-header-mobile.jpg');
+  background: url(/images/image-header-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 10px 10px 0px 0px;
+}
+.card__image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(277, 64%, 61%);
+  opacity: 0.5;
+  z-index: 1;
 }
 @media (min-width: 1440px) {
   .card {
@@ -83,7 +94,7 @@
   .card__image {
     width: 50%;
     height: 100%;
-    background: url('./images/image-header-desktop.jpg');
+    background: url(/images/image-header-desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 0px 10px 10px 0px;
