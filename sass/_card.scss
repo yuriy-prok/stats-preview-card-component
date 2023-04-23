@@ -1,0 +1,106 @@
+.card {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    background-color: $card-background-color;
+    border-radius: 10px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 36px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: 'Inter';
+        font-weight: map-get($font-weights, bold);
+        font-size: 27px;
+        color: $main-heading-color;
+
+        &--highlight {
+            color: $accent-color;
+            @extend .card__title !optional;
+        }
+    }
+
+    &__text {
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: map-get($font-weights, regular);
+        font-size: 13.2px;
+        line-height: 23px;
+        color: $main-paragraph-color;
+    }
+
+    &__stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        &-value {
+            margin-bottom: 5px;
+            font-family: 'Lexend Deca';
+            font-weight: map-get($font-weights, bold);
+            font-size: 20px;
+            letter-spacing: 1px;
+            color: $main-heading-color;
+        }
+
+        &-label {
+            font-family: 'Lexend Deca';
+            font-weight: map-get($font-weights, regular);
+            font-size: 13.2px;
+            color: $stat-heading-color;
+        }
+    }
+
+    &__image {
+        width: 300px;
+        height: 200px;
+        background: url(/images/image-header-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    @include desktop {
+        width: 1110px;
+        height: 474px;
+        flex-direction: row;
+
+        &__content {
+            width: 50%;
+            padding: 87.75px;
+        }
+
+        &__image {
+            width: 50%;
+            height: 100%;
+            background: url(/images/image-header-desktop.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 0px 10px 10px 0px;
+        }
+
+        &__stats {
+            margin-top: 75px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
