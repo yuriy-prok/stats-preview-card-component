@@ -73,7 +73,7 @@
         position: relative;
         width: 300px;
         height: 200px;
-        background: url(/images/image-header-mobile.jpg);
+        background: url('/images/image-header-mobile.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 10px 10px 0px 0px;
@@ -104,7 +104,7 @@
         &__image {
             width: 50%;
             height: 100%;
-            background: url(/images/image-header-desktop.jpg);
+            background: url('/images/image-header-desktop.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             border-radius: 0px 10px 10px 0px;
